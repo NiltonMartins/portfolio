@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image"; // Importação necessária para Next.js
 import { motion } from "framer-motion";
 import { 
   ArrowUpRight, 
@@ -25,7 +26,6 @@ const SOCIAIS = {
   email: "mailto:martirs.niltong@gmail.com",
 };
 
-// Adicionei ": any" para o TypeScript parar de fiscalizar as propriedades internas
 const fadeUp: any = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
@@ -57,10 +57,21 @@ export default function Portfolio() {
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="text-sm font-bold tracking-[0.4em] uppercase cursor-pointer"
+          className="relative group cursor-pointer"
           onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
         >
-          NILTON <span className="text-blue-500 font-black">MARTINS</span>
+          {/* Efeito de Brilho atrás da Logo */}
+          <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          
+          {/* Logo Extenso Dark */}
+          <Image 
+            src="/extenso_fundo_escuro.png" 
+            alt="Nilton Martins" 
+            width={1000} 
+            height={900} 
+            className="relative h-80 md:h-25 w-auto object-contain"
+            priority
+          />
         </motion.div>
         
         <div className="hidden md:flex gap-8 text-[10px] uppercase tracking-[0.3em] font-semibold text-gray-400">
@@ -132,7 +143,19 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer id="contato" className="relative z-10 py-40 border-t border-white/5 text-center">
+      <footer id="contato" className="relative z-10 py-40 border-t border-white/5 text-center px-6">
+        {/* Logo NM Centralizada com Brilho */}
+        <motion.div {...fadeUp} className="flex justify-center mb-12 relative group">
+           <div className="absolute inset-0 bg-blue-600/20 blur-3xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
+           <Image 
+             src="/Logo_fundo_escuro.png" 
+             alt="NM Logo" 
+             width={80} 
+             height={80} 
+             className="relative h-20 w-auto opacity-40 group-hover:opacity-100 transition-all duration-500 grayscale group-hover:grayscale-0" 
+           />
+        </motion.div>
+
         <motion.h2 {...fadeUp} className="text-5xl md:text-8xl font-black tracking-tighter text-white mb-16 uppercase">
           VAMOS <span className="text-blue-500 font-serif italic">CONECTAR</span>?
         </motion.h2>
