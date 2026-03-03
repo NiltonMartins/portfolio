@@ -25,11 +25,15 @@ const SOCIAIS = {
   email: "mailto:martirs.niltong@gmail.com",
 };
 
-const fadeUp = {
+// Adicionei ": any" para o TypeScript parar de fiscalizar as propriedades internas
+const fadeUp: any = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
-  transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
+  transition: { 
+    duration: 0.8, 
+    ease: "easeOut" 
+  }
 };
 
 export default function Portfolio() {
