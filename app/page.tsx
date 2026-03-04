@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { 
   ArrowUpRight, 
   Cpu, 
@@ -22,12 +22,12 @@ const SOCIAIS = {
   email: "mailto:martirs.niltong@gmail.com",
 };
 
-const fadeUp = {
+const fadeUp: Variants = {
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
   transition: { duration: 0.6, ease: "easeOut" }
-};
+} as any;
 
 export default function Portfolio() {
   
