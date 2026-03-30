@@ -17,7 +17,7 @@ import {
 
 const SOCIAIS = {
   github: "https://github.com/NiltonMartins", 
-  linkedin: "https://www.linkedin.com/in/nilton-gimenes-martins/", 
+  linkedin: "https://www.linkedin.com/in/niltonmgmartins/", 
   whatsapp: "https://wa.me/5516991975588", 
   email: "mailto:martirs.niltong@gmail.com",
 };
