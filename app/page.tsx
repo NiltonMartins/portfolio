@@ -131,17 +131,22 @@ export default function Portfolio() {
       <section id="projetos" className="relative z-10 py-20 md:py-32 px-6 max-w-7xl mx-auto">
         <ProjectItem 
           num="01" 
-          title="Personal Portfolio" 
-          tags={["Next.js", "Tailwind", "Framer Motion"]} 
-          desc="Interface de alta performance com foco em UX/UI minimalista e animações fluidas." 
-          link="https://github.com/NiltonMartins/portfolio" 
+          title="Plataforma SaaS de Gerenciamento de Imóveis com Arquitetura Distribuída" 
+          tags={["Django", "Nest.js", "Redis", "Docker", ]} 
+          desc="SaaS full stack com backend robusto, arquitetura distribuída e deploy em cloud utilizando Vercel, Render e Neon. | 
+  
+                Para testar a plataforma, utilize as credenciais:
+
+                Usuário: teste@teste.teste
+                Senha: Teste@d4fe2f83" 
+          link="https://uberhost-front.vercel.app/"
         />
         <ProjectItem 
           num="02" 
-          title="Data Scraper" 
-          tags={["Selenium", "SQL"]} 
-          desc="Extração inteligente de dados com bypass de bloqueios e estruturação em banco de dados." 
-          link={SOCIAIS.github} 
+          title="Personal Portfolio" 
+          tags={["Next.js", "Tailwind", "Framer Motion"]} 
+          desc="Interface de alta performance com foco em UX/UI minimalista e animações fluidas." 
+          link="https://github.com/NiltonMartins/portfolio"
         />
       </section>
 
